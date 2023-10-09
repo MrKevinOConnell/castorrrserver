@@ -5,7 +5,7 @@ import cors from "cors";
 import { generate_signature } from "./utils";
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.port || 4000;
 
 const API_URL = "https://api.neynar.com/v2/farcaster/feed/";
 
