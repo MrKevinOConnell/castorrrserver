@@ -16,6 +16,10 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello there! Api is working");
+});
+
 app.get("/get_channel", async (req: Request, res: Response) => {
   const url = req.query.url as string | undefined;
 
